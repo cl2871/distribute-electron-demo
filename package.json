@@ -1,6 +1,6 @@
 {
   "name": "distribute-electron-demo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
@@ -13,6 +13,13 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^11.2.1",
-    "electron-builder": "^22.9.1"
+    "electron-builder": "^22.9.1",
+    "electron-builder-notarize": "^1.2.0"
+  },
+  "build:": {
+    "afterSign": "electron-builder-notarize",
+    "mac": {
+      "hardenedRuntime": true
+    }
   }
 }
