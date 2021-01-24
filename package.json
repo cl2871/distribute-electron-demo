@@ -1,10 +1,11 @@
 {
-  "name": "my-electron-app",
-  "version": "1.0.0",
-  "description": "",
+  "name": "distribute-electron-demo",
+  "version": "0.1.1",
+  "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "dist": "electron-builder --linux snap",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
